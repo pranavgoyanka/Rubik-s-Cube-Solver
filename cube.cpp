@@ -76,7 +76,7 @@ void getCube(){
 
 }
 
-void right(){
+void R(){
 
 	char temp;
 
@@ -110,7 +110,7 @@ int main(){
     for(int k = 0; k < 4; k++){
     cout << "Press any key to perform: R";
     getch();
-    right();
+    R();
     drawCube();
     cout << endl;
 	}
