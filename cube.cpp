@@ -6,7 +6,8 @@
 using namespace std;
 
 char status[55];
-
+int rStickers[] = {2,5,8,14,18,26,30,38,42,47,50,53};
+				// r r r w  y  w  y  w  y  o  o  o
 //gotoxy decalraiton
 
 COORD coord={0,0}; // this is global variable
@@ -26,7 +27,7 @@ void drawCube(){
 	int i = 0;
 
 	cout << endl << setw(7);
-for(i; i < 54; i++){
+	for(i; i < 54; i++){
 	if(i < 9){
 		cout << status[i] << " ";
 		pos++;
@@ -75,6 +76,28 @@ void getCube(){
 
 }
 
+void right(){
+
+	char temp;
+
+	temp  = status[2];
+
+	status[2] = status[14];
+	status[14] = status[47];
+	status[47] = status[42];
+	status[42] = temp;
+	temp = status[5];
+	status[5] = status[26];
+	status[26] = status[50];
+	status[50] = status[30];
+	status[30] = temp;
+	temp = status[8];
+	status[8] = status[38];
+	status[38] = status[53];
+	status[53] = status[18];
+	status[18] = temp;
+}
+
 
 
 int main(){
@@ -84,8 +107,40 @@ int main(){
 	getCube();
 	drawCube();
     cout << endl;
+    for(int k = 0; k < 4; k++){
+    cout << "Press any key to perform: R";
+    getch();
+    right();
+    drawCube();
+    cout << endl;
+	}
+
 
 
 
     getch();
 }
+
+/*
+A Solved Cube
+
+Red		r
+Blue 	b
+Green 	g
+Yellow	y
+Orange	o
+White 	w
+
+
+rrrrrrrrrbbbwwwgggyyybbbwwwgggyyybbbwwwgggyyyooooooooo
+
+      r r r
+      r r r
+      r r r
+b b b w w w g g g y y y
+b b b w w w g g g y y y
+b b b w w w g g g y y y
+      o o o
+      o o o
+      o o o
+*/
