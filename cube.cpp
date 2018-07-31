@@ -98,6 +98,27 @@ void R(){
 	status[18] = temp;
 }
 
+void L(){
+
+	char temp;
+
+	temp  = status[0];
+
+	status[0] = status[44];
+	status[44] = status[45];
+	status[45] = status[12];
+	status[12] = temp;
+	temp = status[3];
+	status[3] = status[32];
+	status[32] = status[48];
+	status[48] = status[24];
+	status[24] = temp;
+	temp = status[6];
+	status[6] = status[20];
+	status[20] = status[51];
+	status[51] = status[36];
+	status[36] = temp;
+}
 
 
 int main(){
@@ -108,9 +129,9 @@ int main(){
 	drawCube();
     cout << endl;
     for(int k = 0; k < 4; k++){
-    cout << "Press any key to perform: R";
+    cout << "Press any key to perform: L";
     getch();
-    R();
+    L();
     drawCube();
     cout << endl;
 	}
