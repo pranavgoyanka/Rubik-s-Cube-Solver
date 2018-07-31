@@ -80,10 +80,12 @@ void getCube(){
 int main(){
 
 	cout << "Rubik's Cube Input."<<endl;
-
+	//Get Current Cube state
 	getCube();
 	drawCube();
     cout << endl;
+
+
 
     getch();
 }
