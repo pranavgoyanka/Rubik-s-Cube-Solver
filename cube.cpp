@@ -7,19 +7,9 @@ using namespace std;
 
 char status[55];
 
-//gotoxy decalraiton
-
-COORD coord={0,0}; // this is global variable
-                                    //center of axis is set to the top left corner of the screen
-void gotoxy(int x,int y)
- {
-   coord.X=x;
- coord.Y=y;
- SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coord);
-
 
 int cubeStatus[6][9];
-}
+
 
 void drawCube(){
 	int pos = 0;
