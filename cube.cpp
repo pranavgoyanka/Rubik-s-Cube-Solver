@@ -121,6 +121,63 @@ void L(){
 }
 
 
+
+void U(){
+	char temp;
+
+	temp  = status[12];
+
+	status[12] = status[15];
+	status[15] = status[18];
+	status[18] = status[9];
+	status[9] = temp;
+	temp = status[13];
+	status[13] = status[16];
+	status[16] = status[19];
+	status[19] = status[10];
+	status[10] = temp;
+	temp = status[14];
+	status[14] = status[17];
+	status[17] = status[20];
+	status[20] = status[11];
+	status[11] = temp;
+
+}
+/*
+	rrrrrrrrrbbbwwwgggyyybbbwwwgggyyybbbwwwgggyyyooooooooo
+
+	      r r r
+	      r r r
+	      r r r
+	b b b w w w g g g y y y
+	b b b w w w g g g y y y
+	b b b w w w g g g y y y
+	      o o o
+	      o o o
+	      o o o
+*/
+
+void D(){
+	char temp;
+
+	temp  = status[36];
+
+	status[36] = status[33];
+	status[33] = status[42];
+	status[42] = status[39];
+	status[39] = temp;
+	temp = status[37];
+	status[37] = status[34];
+	status[34] = status[43];
+	status[43] = status[40];
+	status[40] = temp;
+	temp = status[38];
+	status[38] = status[35];
+	status[35] = status[44];
+	status[44] = status[41];
+	status[38] = temp;
+}
+
 int main(){
 
 	cout << "Rubik's Cube Input."<<endl;
@@ -129,9 +186,9 @@ int main(){
 	drawCube();
     cout << endl;
     for(int k = 0; k < 4; k++){
-    cout << "Press any key to perform: L";
+    cout << "Press any key to perform: U";
     getch();
-    L();
+    U();
     drawCube();
     cout << endl;
 	}
@@ -142,26 +199,3 @@ int main(){
     getch();
 }
 
-/*
-A Solved Cube
-
-Red		r
-Blue 	b
-Green 	g
-Yellow	y
-Orange	o
-White 	w
-
-
-rrrrrrrrrbbbwwwgggyyybbbwwwgggyyybbbwwwgggyyyooooooooo
-
-      r r r
-      r r r
-      r r r
-b b b w w w g g g y y y
-b b b w w w g g g y y y
-b b b w w w g g g y y y
-      o o o
-      o o o
-      o o o
-*/

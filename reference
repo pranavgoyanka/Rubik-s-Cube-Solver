@@ -1,22 +1,22 @@
-Red		r
-Blue 	b
-Green 	g
-Yellow	y
-Orange	o
-White 	w
+	Red		r
+	Blue 	b
+	Green 	g
+	Yellow	y
+	Orange	o
+	White 	w
 
 
-rrrrrrrrrbbbwwwgggyyybbbwwwgggyyybbbwwwgggyyyooooooooo
+	rrrrrrrrrbbbwwwgggyyybbbwwwgggyyybbbwwwgggyyyooooooooo
 
-      r r r
-      r r r
-      r r r
-b b b w w w g g g y y y
-b b b w w w g g g y y y
-b b b w w w g g g y y y
-      o o o
-      o o o
-      o o o
+	      r r r
+	      r r r
+	      r r r
+	b b b w w w g g g y y y
+	b b b w w w g g g y y y
+	b b b w w w g g g y y y
+	      o o o
+	      o o o
+	      o o o
 
 
       r r w
@@ -46,3 +46,7 @@ b b b r w o g g g r y o
 
 yrwyrwyrwbbbrwogggryobbbrwogggryobbbrwogggryowoywoywoy
 
+
+
+
+	34664556324434663623623135255255116112143544462512312
