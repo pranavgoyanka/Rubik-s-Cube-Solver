@@ -77,7 +77,7 @@ void getCube(){
 }
 
 void R(){
-
+//
 	char temp;
 
 	temp  = status[2];
