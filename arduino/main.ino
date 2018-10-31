@@ -1,32 +1,59 @@
-// Include the Servo library 
 #include <Servo.h> 
-// Declare the Servo pin 
-//int servoPin = 3; 
 
+// Declare the Servo pins 
 int right = 7;
 int up = 6;
+int rem_right = 5;
+int rem_up = 4;
 
-
-// Create a servo object 
-Servo Servo1, Servo2; 
+// Create servo objects
+Servo R, U, remR, remU; 
 void setup() { 
    // We need to attach the servo to the used pin number 
-   Servo1.attach(right);
-   Servo2.attach(up); 
+   //Servo1.attach(right);
+   R.attach(right);
+   U.attach(up);
+   remR.attach(rem_right);
+   remU.attach(rem_up);
 }
-void loop(){ 
-   // Make servo go to 0 degrees 
-   Servo1.write(0); 
-   delay(1000); 
-////   // Make servo go to 90 degrees 
-Servo1.write(90); 
-delay(1000); 
-Servo2.write(90); 
-delay(1000); 
-Servo1.write(0); 
-delay(1000); 
-Servo2.write(0); 
-delay(1000); 
 
+//objname.write(angle_in_degrees);
+//delay(time_in_ms)
+
+//initialise servos
+
+void initialise(){
+    R.write(90);
+    U.write(90);
+    //todo initialise rem servos;
+}
+
+// if angle = -1 then inverted rotation becuase 90deg is the reference angle
+
+void R(int angle = 0){
+    R.write(180 - (90*angle));
+}
+
+void U(int angle = 0){ 
+    U.write(180 - (90*angle));
+}
+
+void RW(int angle = 0){
+    //add remove U function
+    R.write(180 - (90*angle));
+}
+
+
+void UW(int angle = 0){
+    //add remove R function
+    U.write(180 - (90*angle));
+}
+
+void loop(){ 
+    String solution[25];
+
+    for(int i = 0; solution(i)!='\0'; i++){
+        //if(solution(i) == 'R')
+    }
 
 }
